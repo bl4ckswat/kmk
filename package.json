@@ -16,10 +16,18 @@
     "axios-https-proxy-fix": "^0.17.1",
     "cheerio": "^1.0.0-rc.3",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "got": "^11.5.2",
     "helmet": "^3.23.3",
     "tough-cookie": "^4.0.0",
     "tunnel": "0.0.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bl4ckswat/kmk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bl4ckswat/kmk/issues"
+  },
+  "homepage": "https://github.com/bl4ckswat/kmk#readme"
 }
