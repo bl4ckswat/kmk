@@ -140,7 +140,7 @@ router.get("/manga/detail/:slug", async (req, res) => {
 //serach manga ------Done-----------
 router.get("/search/:query", async (req, res) => {
   const query = req.params.query;
-  const url = `https://data.komiku.id/cari/?post_type=manga&s=${query}`;
+  const url = `https://komiku.id/?post_type=manga&s=${query}`;
 
   try {
     const response = await AxiosService(url);
