@@ -16,8 +16,8 @@ router.get("/manga/page/:pagenumber", async (req, res) => {
   let pagenumber = req.params.pagenumber;
   let url =
     pagenumber === "1"
-      ? "https://data.komiku.id/pustaka/"
-      : `https://data.komiku.id/pustaka/page/${pagenumber}/`;
+      ? "https://komiku.id/pustaka/"
+      : `https://komiku.id/pustaka/page/${pagenumber}/`;
 
   try {
     const response = await AxiosService(url);
@@ -221,8 +221,8 @@ router.get("/genres/:slug/:pagenumber", async (req, res) => {
   const pagenumber = req.params.pagenumber;
   const url =
     pagenumber === "1"
-      ? `https://data.komiku.id/pustaka/?orderby=modified&genre=${slug}&genre2=&status=&category_name=`
-      : `https://data.komiku.id/pustaka/page/${pagenumber}/?orderby=modified&genre=${slug}&genre2&status&category_name`;
+      ? `https://komiku.id/pustaka/?orderby=modified&genre=${slug}&genre2=&status=&category_name=`
+      : `https://komiku.id/pustaka/page/${pagenumber}/?orderby=modified&genre=${slug}&genre2&status&category_name`;
   try {
     const response = await AxiosService(url);
     const $ = cheerio.load(response.data);
@@ -353,8 +353,8 @@ const getManhuaManhwa = async (req, res, type) => {
   let pagenumber = req.params.pagenumber;
   let url =
     pagenumber === "1"
-      ? `https://data.komiku.id/pustaka/?orderby=&category_name=${type}&genre=&genre2=&status=`
-      : `https://data.komiku.id/pustaka/page/${pagenumber}/?orderby&category_name=${type}&genre&genre2&status`;
+      ? `https://komiku.id/pustaka/?orderby=&category_name=${type}&genre=&genre2=&status=`
+      : `https://komiku.id/pustaka/page/${pagenumber}/?orderby&category_name=${type}&genre&genre2&status`;
 
   try {
     console.log(url);
